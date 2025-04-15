@@ -43,20 +43,24 @@
 
         /* 卡片容器區域，使用 Flexbox 排版 */
         .card-container {
-            display: flex; /* 啟用 Flexbox */
-            justify-content: space-between; /* 在水平線上分配空間 */
-            align-items: flex-start; /* 確保內容頂端對齊 */
-            flex-wrap: nowrap; /* 防止內容自動換行 */
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-wrap: wrap;
             max-width: 1200px;
-            margin: 0 auto 16px; /* 調整與 footer-text 的距離 */
+            margin: 0 auto;
             padding: 16px;
-            gap: 24px; /* 調整卡片之間的間距 */
+            gap: 24px;
         }
 
         /* 每張卡片的樣式 */
         .card {
-            flex: 1; /* 讓卡片平分空間 */
-            min-width: 300px; /* 設置最小寬度 */
+            background-color: #ecd6bd;
+            border-radius: 20px;
+            padding: 24px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            flex: 1 1 40%;
+            min-width: 300px;
         }
 
         .description {
@@ -66,11 +70,8 @@
         }
 
         .chart {
-            flex: 1; /* 讓圖表平分空間 */
-            min-width: 300px; /* 設置最小寬度 */
-            display: flex;
-            justify-content: center; /* 圖表內容居中 */
-            align-items: center;
+            flex: 1 1 45%; 
+            min-width: 300px;
         }
 
         .chart iframe {
