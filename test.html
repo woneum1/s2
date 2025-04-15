@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Story - 台北市大同區高齡人口型態</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            font-size: 16px;
+            background-color: #f7f1e3;
+            line-height: 1.6;
+            letter-spacing: 0.2px;
+            color: #3f2e23;
+            margin: 0;
+            padding: 0;
+        }
+
+        .card {
+            background-color: #ecd6bd;
+            border: 3px solid #c8a88d;
+            border-radius: 20px;
+            padding: 24px;
+            margin: 32px auto;
+            max-width: 900px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .card h1 {
+            font-size: 28px;
+            margin-top: 0;
+            margin-bottom: 12px;
+            text-align: center;
+            color: #3f2e23;
+        }
+
+        .card h1 .highlight {
+            color: #d9534f;
+        }
+
+        .card h2 {
+            font-size: 18px;
+            font-weight: normal;
+            margin-top: 0;
+            margin-bottom: 8px;
+            text-align: center;
+            color: #5a4a3c;
+        }
+
+        p.description {
+            text-align: center;
+            color: #5a4a3c;
+            font-size: 15px;
+            margin-top: 8px;
+        }
+
+        iframe {
+            width: 100%;
+            height: 600px;
+            border: none;
+            display: block;
+            margin: 0 auto 40px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #999;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>My data story: 這是動畫式曲線圖 <span class="highlight">大同區 A31 至 A33</span> 的 curve chart，呈現台北市大同區高齡人口數據摘要。</h1>
+        <h2>這是我所居住的行政區域，在觀察資料時我發現該區 <u>長照 A22</u> 與 <u>長照 A23</u> 的人數比例較其他行政區高，有許多行動不便的長者</h2>
+        <p class="description">
+            此圖表展示大同區高齡人口在不同照護需求分類下的分布情況，能幫助我們了解在地長者的實際需求，進而思考社區支持的方式。
+        </p>
+    </div>
+
+    <iframe src="https://plotdb.io/v/chart/37122" allowfullscreen="true"></iframe>
+
+    <footer>
+        資料來源：台北市政府開放資料平台 ｜ 製作：Woneum
+    </footer>
+</body>
+</html>
