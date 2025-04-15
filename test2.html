@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- 網頁的基本設定 -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Data Story - 台北市大同區高齡人口型態</title>
     <style>
-        /* 設定網頁的基本樣式，包含字體、背景顏色、字間距等 */
+        /* 基本樣式設定 */
         body {
             font-family: 'Segoe UI', Arial, sans-serif;
             font-size: 16px;
@@ -17,7 +18,7 @@
             padding: 0;
         }
 
-        /* 設定頁首標題區的樣式 */
+        /* 頁首標題的樣式 */
         .header {
             text-align: center;
             padding: 32px 16px 0;
@@ -27,28 +28,13 @@
             font-size: 28px;
             color: #3f2e23;
             margin-bottom: 0;
-            display: inline-block;
             background-image: linear-gradient(to bottom, transparent 60%, #ecd6bd 70%);
         }
 
-
-        /* footer-text 樣式 */
-        .footer-text h3 {
-            font-size: 14px;
-            color: #5a4a3c;
-            text-align: center;
-            padding: 10px;
-        }
-
-        .footer-text .highlight {
-            color: #d9534f;
-        }
-
-        /* 卡片容器區域，使用 Flexbox 排版 */
+        /* 卡片容器的樣式，使用 Flexbox 排版 */
         .card-container {
             display: flex;
             justify-content: center;
-            align-items: flex-start;
             flex-wrap: wrap;
             max-width: 1200px;
             margin: 0 auto;
@@ -56,7 +42,7 @@
             gap: 24px;
         }
 
-        /* 每張卡片的樣式 */
+        /* 單張卡片的樣式 */
         .card {
             background-color: #ecd6bd;
             border-radius: 20px;
@@ -66,17 +52,7 @@
             min-width: 300px;
         }
 
-        .description {
-            color: #5a4a3c;
-            font-size: 15px;
-            margin-top: 8px;
-        }
-
-        .chart {
-            flex: 1 1 45%; 
-            min-width: 300px;
-        }
-
+        /* 圖表樣式 */
         .chart iframe {
             width: 100%;
             height: 500px;
@@ -88,36 +64,34 @@
         /* 頁腳的樣式 */
         footer {
             text-align: right;
-            padding: 10px 20px 10px 15px;
+            padding: 10px 20px;
             color: #999;
             font-size: 14px;
         }
     </style>
 </head>
 <body>
+    <!-- 頁首內容 -->
     <div class="header">
         <h1>台北市大同區高齡人口型態</h1>
     </div>
 
+    <!-- 卡片內容 -->
     <div class="card-container">
         <div class="card">
-            <p class="description">這是我所居住的行政區域，大同區的長期照護需求數據顯示，長照A32和A33的需求比例高於其他行政區，反映出該區高齡人口在日常生活中的特殊挑戰。</p>
-            <p class="description">長照A32指的是需要扶持或依賴穩定物行走的群體，而長照A33則是無法穩定坐姿的群體。這兩類群體的比例在大同區顯著增長，顯示當地有大量高齡者面臨自理能力受限的問題。</p>
-            <p class="description">尤其是長照A32的需求逐年上升，顯示不少高齡者依賴他人或輔具來協助移動，對長期照護服務的依賴更為迫切。長照A33的比例上升則突顯了無法自行保持坐姿的群體，這些人的照護需求更加複雜。</p>
-            <p class="description">這些數據不只是冰冷的統計，它們反映出大同區在老齡化過程中的真實困境。隨著高齡人口需求不斷增加，我們能夠看到這些長期照護的需求，背後是無數需要幫助的高齡者。</p>
-            <p class="description">未來，我們希望能根據這些數據，針對性地提供更多支持，讓高齡者在這個社區中感受到關懷與溫暖，而不是孤單與無助。</p>
+            <p>根據大同區的長期照護需求數據，長照A32和A33的需求比例顯著高於其他行政區，顯示該區高齡人口對輔具和他人協助的依賴程度逐年增加。</p>
+            <p>長照A32：需要輔助工具行走的群體。</p>
+            <p>長照A33：無法穩定坐姿的群體。</p>
+            <p>這些數據反映了大同區老齡化的挑戰，同時也提供了未來改善社區支持的依據。</p>
         </div>
 
+        <!-- 動態圖表嵌入 -->
         <div class="chart">
-            <iframe src="https://plotdb.io/v/chart/37122" allowfullscreen="true"></iframe>
+            <iframe src="https://plotdb.io/v/chart/37122" allowfullscreen></iframe>
         </div>
     </div>
 
-    <div class="footer-text">
-        <h3>這是動畫式曲線圖<span class="highlight">台北市大同區A11至A33</span> 的 curve chart——</br>
-            呈現台北市大同區高齡人口數據摘要，展示在不同照護需求分類下的分布情況，能幫助我們了解在地長者的實際需求，進而思考社區支持的方式。</h3>
-    </div>
-
+    <!-- 資料來源 -->
     <footer>
         資料來源：台北市政府開放資料平台
     </footer>
