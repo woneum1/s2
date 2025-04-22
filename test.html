@@ -38,18 +38,12 @@
       max-width: 800px;
     }
 
-    .header {
-      text-align: center;
-      padding-bottom: 10px;
-      width: 100%;
-    }
-
-    .header h1 {
+    .title {
       font-size: 24px;
       color: #321f04;
-      margin: 0;
+      margin: 0 0 12px 0;
       display: inline-block;
-      white-space: nowrap;
+      padding-bottom: 4px;
       background-image: linear-gradient(to bottom, transparent 60%, #3b8992 70%);
     }
 
@@ -110,12 +104,11 @@
   </style>
 </head>
 <body>
-  <div class="header">
-        <h1>臺北市人口村里級熱力圖</h1>
-    </div>
+
   <div class="chart-wrapper">
-    <!-- 說明文字區（含標題） -->
+    <!-- 說明區（包含標題） -->
     <div class="description-box">
+      <h1 class="title">臺北市人口村里級熱力圖</h1>
       <p>
         這張圖是用來看臺北市各村里的⼈口分布狀況。顏色越深代表人口越多，點進去還能看到更細的數據。簡單來說，就是一張互動式的地圖，幫你快速了解哪裡人比較密集。
       </p>
@@ -124,7 +117,7 @@
     <!-- 分隔線 -->
     <div class="divider"></div>
 
-    <!-- 圖表 -->
+    <!-- 地圖區 -->
     <div class="chart-container">
       <iframe src="https://plotdb.io/v/chart/37211" allowfullscreen="true"></iframe>
     </div>
@@ -134,5 +127,6 @@
   <footer>
     資料來源：社會經濟資料服務平台
   </footer>
+
 </body>
 </html>
