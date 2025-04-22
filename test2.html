@@ -15,6 +15,7 @@
       color: #3b8992;
       margin: 0;
       padding: 0;
+      display: flex; /* 使用 Flexbox 讓內容水平排列 */
     }
 
     /* 頁面上方標題樣式 */
@@ -47,13 +48,20 @@
     .description-box {
       background-color: rgba(245, 245, 245, 0.4);
       padding: 12px 16px;
-      border-radius: 12px;
+      border-radius: 5px;
       color: #3b8992;
       box-shadow: 0 2px 8px rgba(0,0,0,0.05);
       font-size: 16px;
       max-width: 800px;
+      margin: 20px;
     }
-
+    
+    /* 分隔線樣式 */
+    .divider {
+      width: 0.5px; /* 設定線條寬度 */
+      background-color: #3b8992; /* 線條顏色 */
+      margin: 20px; /* 與內容的間距 */
+    }
     /* 圖表外框樣式 */
     .chart-container {
       display: flex;
@@ -113,8 +121,11 @@
     <div class="description-box">
       <p>本圖表顯示臺北市各村里的人口分布，顏色越深代表人口越多。你可以點擊鄉鎮查看詳細資料。</p>
     </div>
-
-    <!-- 地圖圖表 -->
+    
+    <!-- 分隔線 -->
+    <div class="divider"></div>
+    
+    <!-- 圖表 -->
     <div class="chart-container">
       <iframe src="https://plotdb.io/v/chart/37211" allowfullscreen="true"></iframe>
     </div>
