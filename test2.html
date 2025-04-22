@@ -28,6 +28,20 @@
             display: inline-block;
             background-image: linear-gradient(to bottom, transparent 60%, #3b8992 70%);
         }
+        .content-wrapper {
+            display: flex; /* 使用 flex 排列 */
+            flex-direction: column; /* 垂直排列子元素 */
+            align-items: center; /* 水平對齊到中間 */
+            gap: 12px; /* 子項目之間的間距 */
+            padding: 0 16px; /* 增加左右內邊距 */
+        }
+        .header {
+            text-align: center; /* 標題文字居中 */
+        }
+        .description-box {
+            max-width: 800px; /* 說明區塊寬度限制 */
+            text-align: center; /* 說明文字居中 */
+        }
 
         .content {
             display: flex;
