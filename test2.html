@@ -1,114 +1,65 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-Hant">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>臺北市人口村里級熱力圖</title>
-    <style>
-        body {
-            font-family: 'Segoe UI', Arial, sans-serif;
-            font-size: 16px;
-            background-color: #d4e9eb;
-            line-height: 1.6;
-            letter-spacing: 0.2px;
-            color: #3b8992;
-            margin: 0;
-            padding: 0;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>臺北市人口村里級熱力圖</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      font-size: 16px;
+      background-color: #d4e9eb;
+      color: #3b8992;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
 
-        .header {
-            padding: 32px 16px 0;
-        }
+    h1 {
+      font-size: 28px;
+      margin: 32px 0 16px;
+    }
 
-        .header h1 {
-            font-size: 28px;
-            color: #321f04;
-            margin-bottom: 16px;
-            display: inline-block;
-            background-image: linear-gradient(to bottom, transparent 60%, #3b8992 70%);
-        }
-        .content-wrapper {
-            display: flex; /* 使用 flex 排列 */
-            flex-direction: column; /* 垂直排列子元素 */
-            align-items: left; /* 水平對齊到中間 */
-            gap: 12px; /* 子項目之間的間距 */
-            padding: 0 16px; /* 增加左右內邊距 */
-        }
-        .header {
-            text-align: center; /* 標題文字居中 */
-        }
-        .description-box {
-            max-width: 800px; /* 說明區塊寬度限制 */
-            text-align: center; /* 說明文字居中 */
-        }
+    .description {
+      max-width: 600px;
+      margin: 0 auto 24px;
+      padding: 0 16px;
+    }
 
-        .content {
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            padding: 16px;
-            margin: 20px auto;
-            max-width: 800px;
-            gap: 20px; /* 增加文字與地圖的間距 */
-        }
+    .chart-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 32px;
+    }
 
-        .description {
-            flex: 1;
-            max-width: 300px;
-            font-size: 14px;
-            color: #3b8992;
-            background-color: #ffffff;
-            padding: 16px;
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-        }
+    iframe {
+      width: 90%;
+      max-width: 800px;
+      height: 600px;
+      border: none;
+      border-radius: 12px;
+    }
 
-        .chart-container {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          padding: 16px;
-          background-color: #3b8992;
-          border-radius: 30px;
-          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-          width: 98%;
-          max-width: 800px;
-        }
-
-        .chart-container iframe {
-          width: 100%;
-          height: 600px;
-          border: none;
-          border-radius: 12px;
-          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-        }
-
-
-        footer {
-            text-align: right;
-            padding: 10px 20px;
-            color: #999;
-            font-size: 14px;
-        }
-    </style>
+    footer {
+      text-align: center;
+      padding: 10px;
+      color: #999;
+      font-size: 14px;
+    }
+  </style>
 </head>
 <body>
-    <div class="content-wrapper">
-        <div class="header">
-            <h1>臺北市人口村里級熱力圖</h1>
-        </div>
-        <div class="description-box">
-        <p>本圖表呈現臺北市行政區下各村里的人口分布狀況，顏色越深代表該區域人口越多。
-            透過互動功能，可以點選地圖中的區塊，去查看各村里的詳細人口數據。🔍</p>
-        </div>
-    </div>
-    
-    <div class="chart-container">
-      <iframe src="https://plotdb.io/v/chart/37211" allowfullscreen="true"></iframe>
-    </div>
+  <h1>臺北市人口村里級熱力圖</h1>
 
-    <footer>
-        資料來源：社會經濟資料服務平台
-    </footer>
+  <div class="description">
+    <p>本圖表呈現臺北市行政區下各村里的人口分布狀況，顏色越深代表該區域人口越多。透過互動功能，可以點選地圖中的區塊，查看各村里的詳細人口數據。🔍</p>
+  </div>
+
+  <div class="chart-container">
+    <iframe src="https://plotdb.io/v/chart/37211" allowfullscreen="true"></iframe>
+  </div>
+
+  <footer>資料來源：社會經濟資料服務平台</footer>
 </body>
 </html>
