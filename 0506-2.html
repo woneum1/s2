@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
@@ -5,40 +6,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>臺北市人口村里級熱力圖</title>
     <style>
+        :root {
+            --main-color: #3b8992;
+            --text-dark: #321f04;
+            --bg-light: #d4e9eb;
+            --bg-dark: #3b8992;
+        }
+
         body {
             font-family: 'Segoe UI', Arial, sans-serif;
             font-size: 16px;
-            background-color: #d4e9eb;
+            background-color: var(--bg-light);
             line-height: 1.6;
             letter-spacing: 0.2px;
-            color: #3b8992;
+            color: var(--main-color);
             margin: 0;
             padding: 0;
         }
 
         .header {
             text-align: center;
-            padding: 40px 16px 16px;
+            padding: 32px 16px 0;
         }
 
         .header h1 {
-            font-size: 32px;
-            font-weight: bold;
-            color: #321f04;
-            margin-bottom: 12px;
+            font-size: 28px;
+            color: var(--text-dark);
+            margin-bottom: 16px;
             display: inline-block;
-            background-image: linear-gradient(to bottom, transparent 60%, #3b8992 70%);
+            background-image: linear-gradient(to bottom, transparent 60%, var(--main-color) 70%);
         }
 
         .description {
-            max-width: 960px;
-            margin: 0 auto 32px;
-            padding: 0 16px;
-            font-size: 17px;
-        }
-
-        .description p {
-            margin-bottom: 16px;
+            max-width: 950px;
+            margin: 0 auto 20px;
+            padding: 0 5px;
         }
 
         .chart-container {
@@ -46,8 +48,8 @@
             flex-wrap: wrap;
             justify-content: center;
             gap: 24px;
-            padding: 24px;
-            background-color: #3b8992;
+            padding: 16px;
+            background-color: var(--bg-dark);
             border-radius: 20px;
             margin: 20px auto;
             max-width: 1000px;
@@ -57,20 +59,16 @@
         .chart-block {
             width: 480px;
             max-width: 100%;
-            background-color: #ffffff;
-            border-radius: 12px;
-            padding: 16px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
             display: flex;
             flex-direction: column;
             align-items: center;
+            margin-bottom: 24px;
         }
 
         .chart-description {
-            color: #3b8992;
-            font-size: 18px;
+            color: #ffffff;
             font-weight: bold;
-            margin-bottom: 12px;
+            margin-bottom: 8px;
             text-align: center;
         }
 
@@ -79,21 +77,19 @@
             height: 500px;
             border: none;
             border-radius: 12px;
-            margin-bottom: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
         }
 
         .chart-block p {
-            color: #3b8992;
+            color: #ffffff;
             font-size: 15px;
-            line-height: 1.6;
             text-align: center;
-            padding: 0 8px;
+            margin-bottom: 12px;
         }
 
         footer {
             text-align: center;
-            padding: 12px 0;
-            margin-top: 0;
+            padding: 8px 0;
             color: #e5e5e5;
             font-size: 14px;
         }
@@ -105,11 +101,11 @@
             justify-content: center;
             background-color: #f5fdfd;
             border-radius: 20px;
-            padding: 32px;
+            padding: 24px;
             margin: 40px auto;
             max-width: 1000px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-            gap: 32px;
+            gap: 24px;
         }
 
         .action-image img {
@@ -118,51 +114,22 @@
             height: auto;
             border-radius: 12px;
             box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
-        }
-
-        .action-image img:hover {
-            transform: scale(1.03);
         }
 
         .action-text {
             flex: 1;
             min-width: 300px;
-            color: #3b8992;
+            color: var(--main-color);
         }
 
         .action-text h2 {
             font-size: 24px;
-            color: #321f04;
+            color: var(--text-dark);
             margin-bottom: 16px;
-        }
-
-        .action-text a:hover {
-            color: #3b8992;
-            text-decoration: underline;
-        }
-
-        @media (max-width: 600px) {
-            .chart-block iframe {
-                height: 300px;
-            }
-
-            .action-text h2 {
-                font-size: 20px;
-            }
-
-            .chart-container {
-                padding: 16px;
-            }
-
-            .aging-action {
-                padding: 20px;
-            }
         }
     </style>
 </head>
 <body>
-
     <div class="header">
         <h1>臺北市人口村里級互動地圖</h1>
     </div>
@@ -175,33 +142,29 @@
     <div class="chart-container">
         <div class="chart-block">
             <div class="chart-description">臺北市65-79歲人口互動地圖</div>
-            <iframe src="https://plotdb.io/v/chart/37429" allowfullscreen="true"></iframe>
+            <iframe src="https://plotdb.io/v/chart/37429" allowfullscreen></iframe>
             <p>此圖表呈現臺北市各村里中 65 至 79 歲間人口的分布情形。人口密度以色塊深淺顯示，較深代表中高齡人口較多的區域，如士林、大安與文山等區的高齡化趨勢顯著。此年齡層多為退休初期，仍具行動力，社區支持與健康促進資源部署宜提前規劃，以延緩失能風險。</p>
         </div>
-
         <div class="chart-block">
             <div class="chart-description">臺北市80歲以上人口互動地圖</div>
-            <iframe src="https://plotdb.io/v/chart/37430" allowfullscreen="true"></iframe>
+            <iframe src="https://plotdb.io/v/chart/37430" allowfullscreen></iframe>
             <p>此圖表聚焦臺北市村里中 80 歲以上人口的分布情形。圖中可見部分區域如大安區與松山區呈現明顯集中特徵，代表超高齡人口已逐漸集中。此族群行動力下降風險更高，需特別關注照護資源、日照中心與醫療設施可及性，強化高齡者的居家安全與生活品質。</p>
         </div>
     </div>
 
-    <footer>
-        資料來源：社會經濟資料服務平台
-    </footer>
+    <footer>資料來源：社會經濟資料服務平台</footer>
 
     <div class="aging-action">
         <div class="action-image">
             <img src="https://www.sinyicharity.org.tw/_next/image?url=https%3A%2F%2Fres.sinyicharity.org.tw%2F79d587f7-747b-420e-b8a6-5a0a11cf55ec.jpeg&w=1920&q=75" alt="長者運動圖片">
         </div>
         <div class="action-text">
-            <h2><a href="https://www.sinyicharity.org.tw/gather-ideas/vote/2025/10417?openExternalBrowser=1" target="_blank" style="color: #321f04;">齡活行動</a></h2>
+            <h2>集點子計劃——<a href="https://www.sinyicharity.org.tw/gather-ideas/vote/2025/10417?openExternalBrowser=1" target="_blank" style="color: var(--text-dark);">齡活行動</a></h2>
             <p>隨著年齡增長，行動不便的長者比例上升，女性尤甚，因年齡增長導致雌激素減少，影響蛋白質吸收與肌肉生成，易導致肌少症，提升跌倒與失能風險。</p>
             <p>為改善高齡友善城市「康健」面向，我們擬與健身房合作，於早晨與午後離峰時段推出「齡活行動」，專為65歲以上長者設計。課程由專業教練指導，營造安全的運動環境，提供溫和的運動型態、適合的器材與正確的運動知識。</p>
             <p>除強化肌力與心肺功能，也促進社交互動、減緩孤獨感、預防老化相關疾病，改善生活品質，滿足健康與情感需求。讓長者不只能走，更能走得穩、走得自在，在熟悉的社區中持續保持行動力與生活主導權。</p>
             <p>透過「齡活行動」，實現「動得快，老得慢」的目標。</p>
         </div>
     </div>
-
 </body>
 </html>
