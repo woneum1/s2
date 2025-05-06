@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>臺北市人口村里級熱力圖</title>
+<style>
+    body {
+        font-family: 'Segoe UI', Arial, sans-serif;
+        font-size: 16px;
+        background-color: #d4e9eb;
+        line-height: 1.6;
+        letter-spacing: 0.2px;
+        color: #3b8992;
+        margin: 0;
+        padding: 0;
+    }
+
+    .header {
+        text-align: center;
+        padding: 32px 16px 0;
+    }
+
+    .header h1 {
+        font-size: 28px;
+        color: #321f04;
+        margin-bottom: 16px;
+        display: inline-block;
+        background-image: linear-gradient(to bottom, transparent 60%, #3b8992 70%);
+    }
+
+    .description {
+        max-width: 600px;
+        margin: 0 auto 24px;
+        padding: 0 16px;
+    }
+
+    .chart-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 24px;
+        padding: 16px;
+        background-color: #3b8992;
+        border-radius: 20px;
+        margin: 20px auto;
+        max-width: 1000px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    }
+
+    .chart-block {
+        width: 480px;
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .chart-description {
+        color: #ffffff;
+        font-weight: bold;
+        margin-bottom: 8px;
+        text-align: center;
+    }
+
+    .chart-block iframe {
+        width: 100%;
+        height: 500px;
+        border: none;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    }
+
+    .info-container h2 {
+        font-size: 24px;
+        color: #3b8992;
+        text-align: center;
+        margin-bottom: 16px;
+    }
+
+    footer {
+        text-align: right;
+        padding: 0px 20px 0px 20px;
+        color: #999;
+        font-size: 14px;
+    }
+</style>
+</head>
+<body>
+    <div class="header">
+        <h1>臺北市人口村里級互動地圖</h1>
+    </div>
+     
+    <div class="description">
+        <p>下列圖表呈現臺北市行政區下各村里的人口分布狀況，顏色越深代表該區域人口越多。透過互動功能，可以點選地圖中的區塊，查看各村里的詳細人口資訊。</p>
+    </div>
+    
+    <div class="chart-container">
+        <div class="chart-block">
+            <div class="chart-description">臺北市65-79歲人口互動地圖</div>
+            <iframe src="https://plotdb.io/v/chart/37429" allowfullscreen="true"></iframe>
+        </div>
+        <div class="chart-block">
+            <div class="chart-description">臺北市80歲以上人口互動地圖</div>
+            <iframe src="https://plotdb.io/v/chart/37430" allowfullscreen="true"></iframe>
+        </div>
+    </div>
+    
+    <div class="info-container">
+        <h2>齡活行動</h2>
+        <p>隨著年齡增長，行動不便的長者比例上升，女性尤甚，因年齡增長導致雌激素減少，影響蛋白質吸收與肌肉生成，易導致肌少症，提升跌倒與失能風險。</p>
+        <p>為改善高齡友善城市「康健」面向，我們擬與健身房合作，於早晨與午後離峰時段推出「齡活行動」，專為65歲以上長者設計。課程由專業教練指導，營造安全的運動環境，提供溫和的運動型態、適合的器材與正確的運動知識。</p>
+        <p>除強化肌力與心肺功能，也促進社交互動、減緩孤獨感、預防老化相關疾病，改善生活品質，滿足健康與情感需求。讓長者不只能走，更能走得穩、走得自在，在熟悉的社區中持續保持行動力與生活主導權。</p>
+        <p>透過「齡活行動」，實現「動得快，老得慢」的目標。</p>
+    </div>
+
+    <footer>
+        資料來源：社會經濟資料服務平台
+    </footer>
+</body>
+</html>
